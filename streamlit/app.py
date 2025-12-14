@@ -1,12 +1,15 @@
 import streamlit as st
 import pandas as pd
+import os
 
 # -----------------------------
 # Load Data from CSV
 # -----------------------------
 @st.cache_data
 def load_data():
-    return pd.read_csv("streamlit/earthquakes.csv")
+    base_dir = os.path.dirname(__file__)   # folder where app.py is located
+    csv_path = os.path.join(base_dir, "earthquakes.csv")
+    return pd.read_csv(csv_path)
 
 # -----------------------------
 # Page Configuration
