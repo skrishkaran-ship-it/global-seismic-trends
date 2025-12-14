@@ -6,7 +6,7 @@ import pandas as pd
 # -----------------------------
 @st.cache_data
 def load_data():
-    return pd.read_csv("earthquakes.csv")
+    return pd.read_csv("streamlit/earthquakes.csv")
 
 # -----------------------------
 # Page Configuration
